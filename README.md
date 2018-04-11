@@ -103,6 +103,7 @@ The recommended format is:
 - `taxes`: ***optional*** An array of tax objects. If no taxes are applicable, this key can be skipped or be passed as an empty array. The array can also include discount items.
 - `payments`: ***optional*** An array of payment objects. If no payments have been made or not applicable, this key can be skipped or be passed as an empty array. 
 - `version`: The default value for this is the version number of this specification. Vendors can optionally choose to use their own version number as long as it follows the [semantic versioning](https://semver.org) system.
+- `meta`: Includes information about the invoicer and invoicee, and additional keys can be included which aren't included in this spec but may be required for operation of your own applications or applications you are interacting with.
 
 ### Item Object
 - `title`: The title of the item. 
@@ -216,6 +217,3 @@ All numbers should be unformatted, and preferabbly floats rounded up to 2 decima
 
 ### Author
 Nikhil Nigade (Dezine Zync Studios)
-
-### Last Modified
-2018-04-08T13:28:30+05:30
