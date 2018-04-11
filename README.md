@@ -156,7 +156,7 @@ The privaye key of the producer should be used to sign all OIDE packages by the 
 
 The consumer should use the respective public key to verify the signature and then proceed to use the package provided to it.  
 
-This enables both parties involved in the exchange to not only validate that the package isn't modified in-transit, but also to do so securely over established mechanisms. 
+This enables both parties involved in the exchange to not only validate that the package isn't modified in-transit, but also to do so securely over established mechanisms as discussed [here](https://github.com/dezinezync/OIDEFormat/tree/master/discovery). 
 
 An example of the above transaction would look something like so:  
 
