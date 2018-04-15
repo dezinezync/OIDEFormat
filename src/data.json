@@ -1,0 +1,83 @@
+{
+  "invoiceID": "bb94e6e8-99c4-4e97-ba1a-1fbfb2620ebf",
+  "title": "",
+  "number": "DZ-1819-0560",
+  "timestamp": "2018-04-01T00:00:00+05:30",
+  "due": "2018-04-15T23:59:59+05:30",
+  "items": [
+    {
+      "title": "200g chocochip Cookies",
+      "quantity": 2,
+      "rate": {
+        "value": 200,
+        "unit": "currency",
+        "code": "INR",
+        "taxExclude": false
+      },
+      "taxIndex": 1
+    },
+    {
+      "title": "500g oatmeal Cookies",
+      "quantity": 1,
+      "rate": {
+        "value": 450,
+        "unit": "currency",
+        "code": "INR",
+        "taxExclude": false
+      },
+      "taxIndex": 2
+    },
+    {
+      "title": "Shipping & Handling",
+      "quantity": 1,
+      "rate": {
+        "value": 50,
+        "unit": "currency",
+        "code": "INR",
+        "taxExclude": true
+      }
+    }
+  ],
+  "taxes": [
+    {
+      "title": "GST",
+      "rate": 5,
+      "index": 1
+    },
+    {
+      "title": "VAT",
+      "rate": 15,
+      "index": 2
+    },
+    {
+      "title": "Friends & Family Discount",
+      "rate": {
+        "value": -15,
+        "unit": "percent"
+      },
+      "beforeTaxes": false
+    }
+  ],
+  "payments": [
+    {
+      "value": 801.13,
+      "unit": "currency",
+      "code": "INR"
+    }
+  ],
+  "meta": {
+    "invoicer": {
+      "name": "Dezine Zync Studios LLP.",
+      "contact": "+919000090000",
+      "email": "contact@example.com",
+      "contactName": "Nikhil Nigade"
+    },
+    "invoicee": {
+      "name": "ACME Corp.",
+      "contact": "+918000080000",
+      "email": "contact@acme.org",
+      "contactName": "Tom Hardy"
+    }
+  },
+  "version": "1.0"
+}

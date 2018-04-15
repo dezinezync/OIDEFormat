@@ -15,82 +15,87 @@ The recommended format is:
 
 ```json
 {
-    "invoiceID": "bb94e6e8-99c4-4e97-ba1a-1fbfb2620ebf",
-    "title": "",
-    "number": "DZ-1819-0560",
-    "timestamp": "2018-04-01T00:00:00+05:30",
-    "due": "2018-04-15T23:59:59+05:30",
-    "items": [{
-        "title": "200g chocochip Cookies",
-        "quantity": 2,
-        "rate": {
-            "value": 200.00,
-            "unit": "currency",
-            "code": "INR",
-            "taxExclude": false
-        },
-        "taxIndex": 1
-    }, {
-        "title": "500g oatmeal Cookies",
-        "quantity": 1,
-        "rate": {
-            "value": 450.00,
-            "unit": "currency",
-            "code": "INR",
-            "taxExclude": false
-        },
-        "taxIndex": 2
-    }, {
-        "title": "Shipping & Handling",
-        "quantity": 1,
-        "rate": {
-            "value": 50.00,
-            "unit": "currency",
-            "code": "INR",
-            "taxExclude": true
-        }
-    }],
-    "taxes": [{
-        "title": "SGST",
-        "rate": 2.5,
-        "index": 1,
-    }, {
-        "title": "CGST",
-        "rate": 2.5,
-        "index": 1,
-    }, {
-        "title": "SGST",
-        "rate": 9,
-        "index": 2,
-    }, {
-        "title": "CGST",
-        "rate": 9,
-        "index": 2,
-    }, {
-        "title": "Friends & Family Discount",
-        "rate": -15,
-        "beforeTaxes": false 
-    }],
-    "payments": [{
-        "value": 801.13,
+  "invoiceID": "bb94e6e8-99c4-4e97-ba1a-1fbfb2620ebf",
+  "title": "",
+  "number": "DZ-1819-0560",
+  "timestamp": "2018-04-01T00:00:00+05:30",
+  "due": "2018-04-15T23:59:59+05:30",
+  "items": [
+    {
+      "title": "200g chocochip Cookies",
+      "quantity": 2,
+      "rate": {
+        "value": 200,
         "unit": "currency",
-        "code": "INR"
-    }],
-    "meta": {
-        "invoicer": {
-            "name": "Dezine Zync Studios LLP.",
-            "contact": "+919000090000",
-            "email": "contact@example.com",
-            "contactName": "Nikhil Nigade"
-        },
-        "invoicee": {
-            "name": "ACME Corp.",
-            "contact": "+918000080000",
-            "email": "contact@acme.org",
-            "contactName": "Tom Hardy"
-        }
+        "code": "INR",
+        "taxExclude": false
+      },
+      "taxIndex": 1
     },
-    "version": "1.0"
+    {
+      "title": "500g oatmeal Cookies",
+      "quantity": 1,
+      "rate": {
+        "value": 450,
+        "unit": "currency",
+        "code": "INR",
+        "taxExclude": false
+      },
+      "taxIndex": 2
+    },
+    {
+      "title": "Shipping & Handling",
+      "quantity": 1,
+      "rate": {
+        "value": 50,
+        "unit": "currency",
+        "code": "INR",
+        "taxExclude": true
+      }
+    }
+  ],
+  "taxes": [
+    {
+      "title": "GST",
+      "rate": 5,
+      "index": 1
+    },
+    {
+      "title": "VAT",
+      "rate": 15,
+      "index": 2
+    },
+    {
+      "title": "Friends & Family Discount",
+      "rate": {
+        "value": -15,
+        "unit": "percent"
+      },
+      "beforeTaxes": false
+    }
+  ],
+  "payments": [
+    {
+      "value": 801.13,
+      "unit": "currency",
+      "code": "INR"
+    }
+  ],
+  "meta": {
+    "invoicer": {
+      "name": "Dezine Zync Studios LLP.",
+      "contact": "+919000090000",
+      "email": "contact@example.com",
+      "contactName": "Nikhil Nigade"
+    },
+    "invoicee": {
+      "name": "ACME Corp.",
+      "contact": "+918000080000",
+      "email": "contact@acme.org",
+      "contactName": "Tom Hardy"
+    }
+  },
+  "version": "1.0"
 }
 ```
 
@@ -181,11 +186,11 @@ To generate a QR code for the above payload:
 The resulting string for the sample payload is as follows:  
 
 ```
-oide::v0lAcPyvfxP1wWexHBr98AGvhjFl0Fc6n48drZYLXAia2kttvg1+U7xxEns89PfxKHjr+RJrqFizkY4LAgIYmlVd6mbHEUOrrV0qkElGBsqS0M6bBYAPJ2j5l6GkBqxKxvkSDjG+vjzRWgPpHhDHmHFZ7/89HWVjlApVQICiK7z8phR+TSeir7U/kbmjMN+5lWgCkCPZumTpe7FMJuToN0DKr/QKgGrspI0KQ9/Xw0ePRavE4NpaAopZXOkBP6tNlt2jSMlBFsg7DMiq5Fv5q9dlFBiTswUAxsvsC+4oycycWc9dDDpY/BEvRUxGcgLH1j+PmO7CuzZ+ctvRIDszg9kXarfLylZ8Qv7WUSEXtZ6D5BC7AX/VwrMP2Pb230FbsX3EhbVXZdnHwWMMQX2mVkhQwKhZ1AkwjcEYnZ+I1KGbwDC0oy3h/TvK9F+nZiNDNP3+ULPlcAAkb8BqsgbQ3P5FZH4brgos9erNWFZFMomkzKWKYO+N0IKldmFRa64dxheGv0fNCw0LWfnlsHfrrXbEIt9eiFvKzMafejJXhjQgwThw0M1zTYLDbckGfkz2HS31xW+oM1OBIpF9FvV+8tg4D00oSOm80jdMiwtLUFpRzPXnBk0RzSIUbEatNR4FMSAj+gn4Gk9MQSYt7PAaDA5HxvWnF7UgOYdA2psrBtg=::{"invoiceID":"bb94e6e8-99c4-4e97-ba1a-1fbfb2620ebf","title":"","number":"DZ-1819-0560","timestamp":"2018-04-01T00:00:00+05:30","due":"2018-04-15T23:59:59+05:30","items":[{"title":"200g chocochip Cookies","quantity":2,"rate":{"value":200,"unit":"currency","code":"INR","taxExclude":false},"taxIndex":1},{"title":"500g oatmeal Cookies","quantity":1,"rate":{"value":450,"unit":"currency","code":"INR","taxExclude":false},"taxIndex":2},{"title":"Shipping & Handling","quantity":1,"rate":{"value":50,"unit":"currency","code":"INR","taxExclude":true}}],"taxes":[{"title":"SGST","rate":2.5,"index":1},{"title":"CGST","rate":2.5,"index":1},{"title":"SGST","rate":9,"index":2},{"title":"CGST","rate":9,"index":2},{"title":"Friends & Family Discount","rate":-15,"beforeTaxes":false}],"payments":[{"value":801.13,"unit":"currency","code":"INR"}],"meta":{"invoicer":{"name":"Dezine Zync Studios LLP.","contact":"+919000090000","email":"contact@example.com","contactName":"Nikhil Nigade"},"invoicee":{"name":"ACME Corp.","contact":"+918000080000","email":"contact@acme.org","contactName":"Tom Hardy"}},"version":"1.0"}
+oide::ri4kGqOerA6U40s91aGdpBCMKBXl3EIzyrF2eT4aVoQsJPcRXi5pRs4GFnJ1McWY6aLjuY5cVzEwHo/PtAzo50tKGeogPhFgHDI3zad1lEBaoei9HMAWO6n5rv1e32dpUwWQPyZGioeNnC2PJGCFlmhCSoB/jDR5VOul6hkNKTwd/z9bA2cy1ZbzT5UjyMSuT34HpSJWV/muj+RfodPAGYlX6LWHlpA5I6ZblhtQ5u/FOoZ6DoXKYjtJCB/K01siiZIcCxdOwryQ31EMwqrAYNWFVsxvntn2oginRA+vBkoXkQISNBAtr9eBHBiXL2IAI6g8PIRzaadV3d2/fP59kouG4VSw9fwVSZ/SfX6Ef6MTuMcOZLdnF5voW5s/13gzYCVX3PsAy4Jk+giHISw4YP47lG1fuIoh/j3pUiEQjOlKgqBY6d3qbgg5c3rOSHfyGklOebQVvFKzZSVrpje+Lt4VEL5khed+mO06F6SQyRsCNEXTcQ9l/4ZcYnnx3NtUPI76qTG0HTkptFpcpx8MqVJwoTiSskPKFGyWmwQNpyOGP4E1fLKjGIPPJ7+qOLItryPFmargnLkfxX9TL+pINR+jxsvilsDkHxSQPVX/9taiSSxqMtVHpuYct6/4UGYtJZG4PpXsA6XNzlrcUzwPSrCIRFwButoUZtMb2I2Glg8=::{"invoiceID":"bb94e6e8-99c4-4e97-ba1a-1fbfb2620ebf","title":"","number":"DZ-1819-0560","timestamp":"2018-04-01T00:00:00+05:30","due":"2018-04-15T23:59:59+05:30","items":[{"title":"200g chocochip Cookies","quantity":2,"rate":{"value":200,"unit":"currency","code":"INR","taxExclude":false},"taxIndex":1},{"title":"500g oatmeal Cookies","quantity":1,"rate":{"value":450,"unit":"currency","code":"INR","taxExclude":false},"taxIndex":2},{"title":"Shipping & Handling","quantity":1,"rate":{"value":50,"unit":"currency","code":"INR","taxExclude":true}}],"taxes":[{"title":"GST","rate":5,"index":1},{"title":"VAT","rate":15,"index":2},{"title":"Friends & Family Discount","rate":{"value":-15,"unit":"percent"},"beforeTaxes":false}],"payments":[{"value":801.13,"unit":"currency","code":"INR"}],"meta":{"invoicer":{"name":"Dezine Zync Studios LLP.","contact":"+919000090000","email":"contact@example.com","contactName":"Nikhil Nigade"},"invoicee":{"name":"ACME Corp.","contact":"+918000080000","email":"contact@acme.org","contactName":"Tom Hardy"}},"version":"1.0"}
 ```
 
 The above will generate the following QR Code Image:  
-<img src="http://api.qrserver.com/v1/create-qr-code/?color=000000&amp;bgcolor=FFFFFF&amp;data=oide%3A%3Av0lAcPyvfxP1wWexHBr98AGvhjFl0Fc6n48drZYLXAia2kttvg1%2BU7xxEns89PfxKHjr%2BRJrqFizkY4LAgIYmlVd6mbHEUOrrV0qkElGBsqS0M6bBYAPJ2j5l6GkBqxKxvkSDjG%2BvjzRWgPpHhDHmHFZ7%2F89HWVjlApVQICiK7z8phR%2BTSeir7U%2FkbmjMN%2B5lWgCkCPZumTpe7FMJuToN0DKr%2FQKgGrspI0KQ9%2FXw0ePRavE4NpaAopZXOkBP6tNlt2jSMlBFsg7DMiq5Fv5q9dlFBiTswUAxsvsC%2B4oycycWc9dDDpY%2FBEvRUxGcgLH1j%2BPmO7CuzZ%2BctvRIDszg9kXarfLylZ8Qv7WUSEXtZ6D5BC7AX%2FVwrMP2Pb230FbsX3EhbVXZdnHwWMMQX2mVkhQwKhZ1AkwjcEYnZ%2BI1KGbwDC0oy3h%2FTvK9F%2BnZiNDNP3%2BULPlcAAkb8BqsgbQ3P5FZH4brgos9erNWFZFMomkzKWKYO%2BN0IKldmFRa64dxheGv0fNCw0LWfnlsHfrrXbEIt9eiFvKzMafejJXhjQgwThw0M1zTYLDbckGfkz2HS31xW%2BoM1OBIpF9FvV%2B8tg4D00oSOm80jdMiwtLUFpRzPXnBk0RzSIUbEatNR4FMSAj%2Bgn4Gk9MQSYt7PAaDA5HxvWnF7UgOYdA2psrBtg%3D%3A%3A%7B%22invoiceID%22%3A%22bb94e6e8-99c4-4e97-ba1a-1fbfb2620ebf%22%2C%22title%22%3A%22%22%2C%22number%22%3A%22DZ-1819-0560%22%2C%22timestamp%22%3A%222018-04-01T00%3A00%3A00%2B05%3A30%22%2C%22due%22%3A%222018-04-15T23%3A59%3A59%2B05%3A30%22%2C%22items%22%3A%5B%7B%22title%22%3A%22200g+chocochip+Cookies%22%2C%22quantity%22%3A2%2C%22rate%22%3A%7B%22value%22%3A200%2C%22unit%22%3A%22currency%22%2C%22code%22%3A%22INR%22%2C%22taxExclude%22%3Afalse%7D%2C%22taxIndex%22%3A1%7D%2C%7B%22title%22%3A%22500g+oatmeal+Cookies%22%2C%22quantity%22%3A1%2C%22rate%22%3A%7B%22value%22%3A450%2C%22unit%22%3A%22currency%22%2C%22code%22%3A%22INR%22%2C%22taxExclude%22%3Afalse%7D%2C%22taxIndex%22%3A2%7D%2C%7B%22title%22%3A%22Shipping+%26+Handling%22%2C%22quantity%22%3A1%2C%22rate%22%3A%7B%22value%22%3A50%2C%22unit%22%3A%22currency%22%2C%22code%22%3A%22INR%22%2C%22taxExclude%22%3Atrue%7D%7D%5D%2C%22taxes%22%3A%5B%7B%22title%22%3A%22SGST%22%2C%22rate%22%3A2.5%2C%22index%22%3A1%7D%2C%7B%22title%22%3A%22CGST%22%2C%22rate%22%3A2.5%2C%22index%22%3A1%7D%2C%7B%22title%22%3A%22SGST%22%2C%22rate%22%3A9%2C%22index%22%3A2%7D%2C%7B%22title%22%3A%22CGST%22%2C%22rate%22%3A9%2C%22index%22%3A2%7D%2C%7B%22title%22%3A%22Friends+%26+Family+Discount%22%2C%22rate%22%3A-15%2C%22beforeTaxes%22%3Afalse%7D%5D%2C%22payments%22%3A%5B%7B%22value%22%3A801.13%2C%22unit%22%3A%22currency%22%2C%22code%22%3A%22INR%22%7D%5D%2C%22meta%22%3A%7B%22invoicer%22%3A%7B%22name%22%3A%22Dezine+Zync+Studios+LLP.%22%2C%22contact%22%3A%22%2B919000090000%22%2C%22email%22%3A%22contact%40example.com%22%2C%22contactName%22%3A%22Nikhil+Nigade%22%7D%2C%22invoicee%22%3A%7B%22name%22%3A%22ACME+Corp.%22%2C%22contact%22%3A%22%2B918000080000%22%2C%22email%22%3A%22contact%40acme.org%22%2C%22contactName%22%3A%22Tom+Hardy%22%7D%7D%2C%22version%22%3A%221.0%22%7D&amp;qzone=0&amp;margin=0&amp;size=400x400&amp;ecc=L" alt="qr code" />
+<img src="http://api.qrserver.com/v1/create-qr-code/?color=000000&amp;bgcolor=FFFFFF&amp;data=oide%3A%3Ari4kGqOerA6U40s91aGdpBCMKBXl3EIzyrF2eT4aVoQsJPcRXi5pRs4GFnJ1McWY6aLjuY5cVzEwHo%2FPtAzo50tKGeogPhFgHDI3zad1lEBaoei9HMAWO6n5rv1e32dpUwWQPyZGioeNnC2PJGCFlmhCSoB%2FjDR5VOul6hkNKTwd%2Fz9bA2cy1ZbzT5UjyMSuT34HpSJWV%2Fmuj%2BRfodPAGYlX6LWHlpA5I6ZblhtQ5u%2FFOoZ6DoXKYjtJCB%2FK01siiZIcCxdOwryQ31EMwqrAYNWFVsxvntn2oginRA%2BvBkoXkQISNBAtr9eBHBiXL2IAI6g8PIRzaadV3d2%2FfP59kouG4VSw9fwVSZ%2FSfX6Ef6MTuMcOZLdnF5voW5s%2F13gzYCVX3PsAy4Jk%2BgiHISw4YP47lG1fuIoh%2Fj3pUiEQjOlKgqBY6d3qbgg5c3rOSHfyGklOebQVvFKzZSVrpje%2BLt4VEL5khed%2BmO06F6SQyRsCNEXTcQ9l%2F4ZcYnnx3NtUPI76qTG0HTkptFpcpx8MqVJwoTiSskPKFGyWmwQNpyOGP4E1fLKjGIPPJ7%2BqOLItryPFmargnLkfxX9TL%2BpINR%2BjxsvilsDkHxSQPVX%2F9taiSSxqMtVHpuYct6%2F4UGYtJZG4PpXsA6XNzlrcUzwPSrCIRFwButoUZtMb2I2Glg8%3D%3A%3A%7B%22invoiceID%22%3A%22bb94e6e8-99c4-4e97-ba1a-1fbfb2620ebf%22%2C%22title%22%3A%22%22%2C%22number%22%3A%22DZ-1819-0560%22%2C%22timestamp%22%3A%222018-04-01T00%3A00%3A00%2B05%3A30%22%2C%22due%22%3A%222018-04-15T23%3A59%3A59%2B05%3A30%22%2C%22items%22%3A%5B%7B%22title%22%3A%22200g+chocochip+Cookies%22%2C%22quantity%22%3A2%2C%22rate%22%3A%7B%22value%22%3A200%2C%22unit%22%3A%22currency%22%2C%22code%22%3A%22INR%22%2C%22taxExclude%22%3Afalse%7D%2C%22taxIndex%22%3A1%7D%2C%7B%22title%22%3A%22500g+oatmeal+Cookies%22%2C%22quantity%22%3A1%2C%22rate%22%3A%7B%22value%22%3A450%2C%22unit%22%3A%22currency%22%2C%22code%22%3A%22INR%22%2C%22taxExclude%22%3Afalse%7D%2C%22taxIndex%22%3A2%7D%2C%7B%22title%22%3A%22Shipping+%26+Handling%22%2C%22quantity%22%3A1%2C%22rate%22%3A%7B%22value%22%3A50%2C%22unit%22%3A%22currency%22%2C%22code%22%3A%22INR%22%2C%22taxExclude%22%3Atrue%7D%7D%5D%2C%22taxes%22%3A%5B%7B%22title%22%3A%22GST%22%2C%22rate%22%3A5%2C%22index%22%3A1%7D%2C%7B%22title%22%3A%22VAT%22%2C%22rate%22%3A15%2C%22index%22%3A2%7D%2C%7B%22title%22%3A%22Friends+%26+Family+Discount%22%2C%22rate%22%3A%7B%22value%22%3A-15%2C%22unit%22%3A%22percent%22%7D%2C%22beforeTaxes%22%3Afalse%7D%5D%2C%22payments%22%3A%5B%7B%22value%22%3A801.13%2C%22unit%22%3A%22currency%22%2C%22code%22%3A%22INR%22%7D%5D%2C%22meta%22%3A%7B%22invoicer%22%3A%7B%22name%22%3A%22Dezine+Zync+Studios+LLP.%22%2C%22contact%22%3A%22%2B919000090000%22%2C%22email%22%3A%22contact%40example.com%22%2C%22contactName%22%3A%22Nikhil+Nigade%22%7D%2C%22invoicee%22%3A%7B%22name%22%3A%22ACME+Corp.%22%2C%22contact%22%3A%22%2B918000080000%22%2C%22email%22%3A%22contact%40acme.org%22%2C%22contactName%22%3A%22Tom+Hardy%22%7D%7D%2C%22version%22%3A%221.0%22%7D&amp;qzone=0&amp;margin=0&amp;size=400x400&amp;ecc=L" alt="qr code" />
 
 ## Units
 All units to be used in the JSON structures should be a recognized ISO format or a widely adopted system agreed upon by this specification. This is applicable but not limited to:  
