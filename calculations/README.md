@@ -44,7 +44,7 @@ TOTAL_TAXES = 20 + 67.5 = 87.50
 
 ## Discounts
 
-There's also a discount included with the `beforeTaxes` key set to `false`. If this were true, you'd apply the discount first and then compute the taxes. This is explained further in [this](https://github.com/dezinezync/OIDEFormat#simpler) example.
+There's also a discount included with the `beforeTaxes` key set to `false`. If this were true, you'd apply the discount first and then compute the taxes. This is explained further in [this](https://github.com/dezinezync/OIDEFormat/tree/master/calculations#simpler) example.
 
 At this point, our total is **1037.50**. Let's compute the discount next. It's a direct percent. This can also be a currency with it's associated code. Then the amount can be directly subtracted. 
 
