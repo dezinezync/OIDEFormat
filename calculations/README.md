@@ -140,7 +140,7 @@ The above example is fairly straight forward. Most use cases should look like th
 ```js
 const itemsTotal = 400 + 450 + 50 - 120 = 880
 
-const taxes = (880 * 0.05) 			    = 44
+const taxes = (880 * 0.05)              = 44
 
 const taxedTotal = itemsTotal + taxes   = 924
 
